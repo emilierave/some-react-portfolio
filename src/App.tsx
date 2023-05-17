@@ -6,6 +6,8 @@ import logo from "./logo.svg";
 import './App.css';
 import particlesOptions from "./particles.json";
 import { ISourceOptions } from "tsparticles-engine";
+import Button from '@mui/material/Button';
+import ResponsiveAppBar from './ResponsiveAppBar';
 
 function App() {
     const particlesInit = useCallback(async (engine: Engine) => {
@@ -15,9 +17,11 @@ function App() {
     return (
         <div className="App">
             <Particles options={particlesOptions as ISourceOptions} init={particlesInit}/>
+            <ResponsiveAppBar/>
             <header className="App-header">
                 <img src={logo} className="App-logo" alt="logo"/>
                 <p>
+        
                     Edit <code>src/App.tsx</code> and save to reload.
                 </p>
                 <p>
@@ -39,6 +43,9 @@ function App() {
                 >
                     See Particles samples
                 </a>
+                <div>
+      <Button variant="contained">Hello World</Button>
+    </div>
             </header>
         </div>
     );
